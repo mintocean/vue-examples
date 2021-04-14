@@ -5,10 +5,10 @@
     <ul>
       <li v-for="(item , idx) in items" :key="idx">
         {{ item.text }}
-        <button @click="removeItem(idx)">Remove Item</button>
+        <button @click="removeItem(idx)" class="btn btn-primary">Remove Item</button>
       </li>
     </ul>
-    <button @click="addItem">Add Item</button>
+    <button @click="changeItem" class="btn btn-danger">Change Item</button>
   </div>
 </template>
 
@@ -38,12 +38,18 @@ export default {
     }
   },
   methods : {
-    addItem(){
-      let idx = this.items.length + 1;
-      this.items.push({
-        value : idx ,
-        text : 'item ' + idx
-      });
+    changeName(){
+      this.name = 'unknown user';
+    },
+    changeItem(){
+      let n = [
+        {
+          value : 10 ,
+          text : 'new item'
+        }
+      ];
+
+      this.items = n;
     },
     removeItem(idx){
       this.items.splice(idx , 1);
