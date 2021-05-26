@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
   name: 'TwitterDetail',
@@ -17,19 +16,11 @@ export default {
   },
   data(){
     return {
-      "appId": "609d61a3cfa64e21a68b8e5c" 
+      
     }
   },
   mounted(){
-    // ajax with axios
-    axios.get('https://dummyapi.io/data/api/user?limit=10' , {
-      'headers' : {
-        "app-id" : this.appId
-      }
-    })
-    .then((res) => {
-      console.log( res.data );
-    });
+    
   }
 }
 </script>

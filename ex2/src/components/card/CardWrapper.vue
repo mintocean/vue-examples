@@ -12,6 +12,9 @@ export default {
   components: {
     Card
   },
+  mounted(){
+      console.log( 'mounted event' );
+  },
   data(){
     return {
         items : [
